@@ -19,6 +19,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         curl \
         vim \
         wget \
+        unzip \
         ca-certificates \
         libcudnn7=${CUDNN_VERSION} \
         libnccl2=${NCCL_VERSION} \
