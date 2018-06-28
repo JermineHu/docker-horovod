@@ -33,6 +33,9 @@ RUN ln -s /usr/bin/python${PYTHON_VERSION} /usr/bin/python
 RUN curl -O https://bootstrap.pypa.io/get-pip.py && \
     python get-pip.py && \
     rm get-pip.py
+
+# Install TensorFlow and Keras
+RUN pip install tensorflow-gpu==${TENSORFLOW_VERSION} keras h5py
     
 # Install PyTorch
 RUN PY=$(echo ${PYTHON_VERSION} | sed s/\\.//); \
